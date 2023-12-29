@@ -1,16 +1,16 @@
 import 'package:brain_buster/answer_button.dart';
 import 'package:flutter/material.dart';
 
-class Questions extends StatefulWidget{
-  const Questions({super.key});
+class QuestionWidget extends StatefulWidget{
+  const QuestionWidget({super.key});
 
   @override
-  State<Questions> createState(){
-    return _QuestionsState();
+  State<QuestionWidget> createState(){
+    return _QuestionWidgetState();
   }
 }
 
-class _QuestionsState extends State<Questions>{
+class _QuestionWidgetState extends State<QuestionWidget>{
   
 
   @override
