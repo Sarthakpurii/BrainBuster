@@ -1,5 +1,5 @@
-import 'package:brain_buster/gradient_container.dart';
-import 'package:brain_buster/questions.dart';
+import 'package:brain_buster/questions_widget.dart';
+import 'package:brain_buster/welcome.dart';
 import 'package:flutter/material.dart';
 
 class Quiz extends StatefulWidget{
@@ -16,7 +16,7 @@ class _QuizState extends State<Quiz>{
   Widget? activeScreen;
   @override
   void initState() {
-    activeScreen=GradientContainer(switchScreen);
+    activeScreen=Welcome(switchScreen);
     super.initState();
   }
   void switchScreen(){
@@ -29,10 +29,20 @@ class _QuizState extends State<Quiz>{
   Widget build(context){
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.black,
-        body: activeScreen
+        // backgroundColor: Colors.black,
+        body: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              colors:[
+          Color.fromARGB(255, 236, 216, 39),Color.fromARGB(255, 58, 249, 233)
+        ],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight),
+          ),
+          child: activeScreen,
         // body: Questions(),
-      ),
+        ),
+      )
     );
   }
 }

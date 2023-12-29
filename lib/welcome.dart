@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class GradientContainer extends StatelessWidget{
-  const GradientContainer(this.switchScreen,{super.key});
+class Welcome extends StatelessWidget{
+  const Welcome(this.switchScreen,{super.key});
 
   final void Function() switchScreen;
 
@@ -9,16 +9,7 @@ class GradientContainer extends StatelessWidget{
 
   @override
   Widget build(context){
-    return Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              colors:[
-          Color.fromARGB(255, 236, 216, 39),Color.fromARGB(255, 58, 249, 233)
-        ],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight),
-          ),
-          child: Center(
+    return Center(
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
@@ -40,7 +31,6 @@ class GradientContainer extends StatelessWidget{
                   label: const Text('Start Quiz'))
               ],
             ),
-          ),
         );
   }
 }
