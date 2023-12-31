@@ -7,6 +7,7 @@ class QuestionWidget extends StatefulWidget{
   const QuestionWidget(this.storeSelectedAns,{super.key});
 
   final void Function(String ans) storeSelectedAns;
+  // final void Function() switchToResult;
 
   @override
   State<QuestionWidget> createState(){

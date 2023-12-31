@@ -1,4 +1,5 @@
 import 'package:brain_buster/questions_widget.dart';
+import 'package:brain_buster/result_widget.dart';
 import 'package:brain_buster/welcome.dart';
 import 'package:flutter/material.dart';
 
@@ -14,8 +15,26 @@ class Quiz extends StatefulWidget{
 class _QuizState extends State<Quiz>{
 
   Widget? activeScreen;
-  final List<String> selectedAns=[];
+  List<String> selectedAns=[];
 
+
+//Switches to Question Widget
+  void switchScreen(){
+    setState((){
+      activeScreen=QuestionWidget(storeSelectedAns);
+    });
+  }
+
+  //Stores ans and switches to Result Widget
+  void storeSelectedAns(String ans){
+    selectedAns.add(ans);
+    if (selectedAns.length==10){
+      setState(() {
+        selectedAns=[];
+        activeScreen=ResultScreen(selectedAns);
+    });
+    }
+  }
 
   @override
   void initState() {
@@ -23,17 +42,9 @@ class _QuizState extends State<Quiz>{
     super.initState();
   }
 
-  void switchScreen(){
-    setState((){
-      activeScreen=QuestionWidget(storeSelectedAns);
-    });
-  }
-  void storeSelectedAns(String ans){
-    selectedAns.add(ans);
-  }
-
   @override
   Widget build(context){
+    
     return MaterialApp(
       home: Scaffold(
         // backgroundColor: Colors.black,
