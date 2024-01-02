@@ -77,26 +77,37 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
+  fonts:
     - family: Hater
       fonts:
-        - asset: assets/fonts/Hater.ttf
+      - asset: assets/Fonts/Hater.ttf
 
     - family: Blatter
       fonts:
-        - asset: assets/fonts/Blatter-Regular.ttf
-
+        - asset: assets/Fonts/Blatter-Regular.ttf
     - family: Circo
       fonts:
-        - asset: assets/fonts/Circo.otf
+        - asset: assets/Fonts/Circo.otf
 
     - family: NeueComic
       fonts:
-        - asset: assets/fonts/NeueComic.otf
+        - asset: assets/Fonts/NeueComic.otf
 
     - family: Revoke
       fonts:
-        - asset: assets/fonts/Revoke-Regular.ttf
+        - asset: assets/Fonts/Revoke-Regular.ttf
+
+    - family: Streetwear
+      fonts:
+        - asset: assets/Fonts/Streetwear.otf
+
+    - family: Formom
+      fonts:
+        - asset: assets/Fonts/Formom.ttf
+
+    - family: Combo Capital
+      fonts:
+        - asset: assets/Fonts/Combo Capital.otf
 
   #
   # For details regarding fonts from package dependencies,
