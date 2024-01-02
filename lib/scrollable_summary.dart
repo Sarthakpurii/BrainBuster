@@ -7,21 +7,27 @@ class ScrollableSummary extends StatelessWidget{
 
   @override
   Widget build(context){
-    return Column(
-      children: summary.map((data) {
-        return Row(
-          children: [
-            Text(((data['quesNo'] as int) + 1).toString()),
-            Column(
+    return SizedBox(
+      height: 400,
+      child: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
+        child: Column(
+          children: summary.map((data) {
+            return Row(
               children: [
-                Text(data['quesText'] as String),
-                Text(data['selectedAns'] as String),
-                Text(data['Status'] as String)
+                Text(((data['quesNo'] as int)).toString()),
+                Column(
+                  children: [
+                    Text(data['quesText'] as String),
+                    Text(data['selectedAns'] as String),
+                    Text(data['Status'] as String)
+                  ],
+                )
               ],
-            )
-          ],
-        );
-      }).toList(),
+            );
+          }).toList(),
+        ),
+      ),
     );
   }
 }
