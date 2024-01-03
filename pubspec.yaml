@@ -109,6 +109,18 @@ flutter:
       fonts:
         - asset: assets/Fonts/Combo Capital.otf
 
+    - family: Beware
+      fonts:
+        - asset: assets/Fonts/BEWARE.ttf
+
+    - family: Cakelan
+      fonts:
+        - asset: assets/Fonts/CAKELAN.ttf
+
+    - family: Misron
+      fonts:
+        - asset: assets/Fonts/Misron.ttf
+
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

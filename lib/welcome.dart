@@ -28,12 +28,12 @@ class Welcome extends StatelessWidget{
                 ),
                 ),
                 const SizedBox(height: 20,),
-                OutlinedButton.icon(
+                ElevatedButton.icon(
                   onPressed: switchScreen, 
-                  style: OutlinedButton.styleFrom(
+                  style: ElevatedButton.styleFrom(
                     backgroundColor: const Color.fromARGB(255, 74, 78, 105),
                     elevation: 10,
-                    padding: EdgeInsets.symmetric(horizontal: 25, vertical: 12)
+                    padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 12)
                     ),
                     icon: const Icon(Icons.timer_outlined,color: Colors.white,size: 21,),
                   label: const Text('Start Quiz',style: TextStyle(

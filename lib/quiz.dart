@@ -57,7 +57,7 @@ void restartApp(){
           decoration: const BoxDecoration(
             gradient: LinearGradient(
               colors:[
-          Color.fromARGB(255, 228, 109, 99),Color.fromARGB(255, 220, 133, 125)
+          Color.fromARGB(255, 227, 127, 118),Color.fromARGB(255, 169, 74, 65)
         ],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight),

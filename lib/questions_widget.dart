@@ -38,6 +38,7 @@ class _QuestionWidgetState extends State<QuestionWidget>{
           Text(curQues.question,
           textAlign: TextAlign.center,
           style: const TextStyle(
+            fontFamily: 'Cakelan',
             color: Colors.white,
             fontSize: 26,
           ),
