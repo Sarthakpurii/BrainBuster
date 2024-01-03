@@ -2,6 +2,7 @@ import 'package:brain_buster/answer_button.dart';
 import 'package:brain_buster/data/question_data.dart';
 import 'package:brain_buster/models/question_form.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class QuestionWidget extends StatefulWidget{
   const QuestionWidget(this.storeSelectedAns,{super.key});
@@ -37,8 +38,9 @@ class _QuestionWidgetState extends State<QuestionWidget>{
         children: [
           Text(curQues.question,
           textAlign: TextAlign.center,
-          style: const TextStyle(
-            fontFamily: 'Cakelan',
+          style: GoogleFonts.merienda(
+            // fontWeight: FontWeight.w700,
+            // fontFamily: 'Cakelan',
             color: Colors.white,
             fontSize: 26,
           ),

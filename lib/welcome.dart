@@ -28,6 +28,10 @@ class Welcome extends StatelessWidget{
                 ),
                 ),
                 const SizedBox(height: 20,),
+
+
+
+                
                 Container(
   decoration: BoxDecoration(
     // color: Color.fromARGB(255, 74, 78, 105),
@@ -37,14 +41,14 @@ class Welcome extends StatelessWidget{
         color: Colors.black.withOpacity(0.5),
         spreadRadius: 0,
         blurRadius: 10,
-        offset: Offset(0, 0), // changes position of shadow
+        offset: const Offset(0, 0), // changes position of shadow
       ),
     ],
   ),
   child: ElevatedButton.icon(
     onPressed: switchScreen, 
     style: ElevatedButton.styleFrom(
-      primary: Colors.transparent, // To use the container's color
+      backgroundColor: Colors.transparent, // To use the container's color
       shadowColor: Colors.transparent, // To remove button's default shadow
       elevation: 0, // To remove button's default elevation
       padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 12)

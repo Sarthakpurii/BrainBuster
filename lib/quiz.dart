@@ -16,10 +16,12 @@ class _QuizState extends State<Quiz>{
 
   Widget? activeScreen;
   List<String> selectedAns=[];
+  List<Color> gradientbackground=const [Color.fromARGB(255, 227, 127, 118),Color.fromARGB(255, 169, 74, 65)];
 
 //Switches from Result Screen to Start Screen
 void restartApp(){
   setState(() {
+    gradientbackground=const [Color.fromARGB(255, 227, 127, 118),Color.fromARGB(255, 169, 74, 65)];
     activeScreen=Welcome(switchScreen);
   });
 }
@@ -35,6 +37,7 @@ void restartApp(){
     selectedAns.add(ans);
     if (selectedAns.length==10){
       setState(() {
+        gradientbackground=const [Color.fromARGB(255, 179, 91, 83),Color.fromARGB(255, 150, 60, 52)];
         activeScreen=ResultScreen(selectedAns,restartApp);
         selectedAns=[];
     });
@@ -44,6 +47,19 @@ void restartApp(){
   @override
   void initState() {
     activeScreen=Welcome(switchScreen);
+//     activeScreen=ResultScreen(const [
+//   "Thomas Jefferson",
+//   "Rome",
+//   "H2O",
+//   "Martin Scorsese",
+//   "11",
+//   "1942",
+//   "Mississippi",
+//   "Ruby",
+//   "Elton John",
+//   "Tennis"
+// ]
+// ,restartApp);
     super.initState();
   }
 
@@ -54,11 +70,9 @@ void restartApp(){
       home: Scaffold(
         // backgroundColor: Colors.black,
         body: Container(
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
             gradient: LinearGradient(
-              colors:[
-          Color.fromARGB(255, 227, 127, 118),Color.fromARGB(255, 169, 74, 65)
-        ],
+              colors:gradientbackground,
               begin: Alignment.topLeft,
               end: Alignment.bottomRight),
           ),
